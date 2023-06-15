@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Language Translator"
+            android:id="@+id/IDText"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/IDText"
+            android:layout_marginTop="5dp"
+            android:id="@+id/IDTranslate"
+            >
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:id="@+id/IDFromTxt"
+
+                />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_arrow"
+                android:layout_gravity="center"
+                />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:id="@+id/IDToTxt"
+                />
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/IDTranslate"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:hint="Source Text"
+            app:hintTextColor="@color/white"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:importantForAutofill="no"
+                android:id="@+id/IDEdtTxt"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Translate"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/IDTranslateBtn"
+            />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Translated Text"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="20dp"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/IDTranslatedTV"
+        android:textColor="@color/white"
+        android:textIsSelectable="true"
+        />
+
+
+
+</LinearLayout>
